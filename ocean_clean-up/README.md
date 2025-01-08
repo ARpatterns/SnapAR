@@ -1,10 +1,10 @@
 # Ocean Clean-Up
-todo: add illustration when illustration assets are ready
-<!-- <div align="center">
+<!-- todo: add illustration when illustration assets are ready
+<div align="center">
   <img src="graphics/segment_overlay.png" width="500"/>
 </div> -->
 
-In this AR scenario, the player's hands become dragons by overlaying dragon images over the hands using the segment overlay pattern. The player uses their hands to directly control these dragons and interact with the game.
+In this AR scenario, the player controls the scissors and the camera to interact with the game. The player can imitate the scissors, and they appear on top of their hands. This is an example of the segment overlay pattern. To use the camera, the player imitates holding a the camera, which is an example of the anchored supplement pattern.
 
 * _Use Case_: anchored complement
 * _Technology Platform_: [SnapAR](../README.md)
@@ -25,6 +25,7 @@ The player can cut the rope of the hook with the scissors. If a fish or trash it
   <img src="graphics/scissors_gesture.gif" align=center width="220"/>
   <img src="graphics/cut_rope.gif" align=center width="200"/>
 </div>
+<br>
 
 Another way to interact with the game is by taking pictures of fish. The camera takes a picture of all the fish visible in the camera screen. Those fish pose for the picture, thus remaining in the same place for two seconds. Additionally, the fish show their true color for the picture. To indicate the two seconds time interval, the color of the fish gradually fades. This mechanic can be used to stop the fish from moving into the hook. For illustration purposes, the camera gesture is shown in front of the camera graphics.
 
@@ -32,12 +33,14 @@ Another way to interact with the game is by taking pictures of fish. The camera 
   <img src="graphics/camera_gesture.gif" align=center width="250"/>
   <img src="graphics/take_picture.gif" align=center width="200"/>
 </div>
+<br>
 
 The game is over when all the trash is picked up from the sea floor. It is a score-based game. The score is explained in the table below. 
 
 <div align="center">
   <img src="graphics/gameplay.gif" width="300"/>
 </div>
+<br>
 
 <div align="center">
 
@@ -52,9 +55,9 @@ The game is over when all the trash is picked up from the sea floor. It is a sco
 
 #### Play the Game
 1. Download [Lens Studio 4.31](https://ar.snap.com/download/v4-31). The game only works with this version.
-2. Open [dragon_game.lsproj](LensStudio/fish_game.lsproj) in Lens Studio
-3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). You should see the screen on the left.
-4. Choose your dominant hand. It will be the hand you use for the camera gesture. For the scissors gesture, you can either use the same hand and switch between the gestures. However, user testing has shown that switching between these two gestures can be difficult, therefore you can also use the other hand for the scissors gesture. After choosing the dominant hand, you will see the screen on the right.
+2. Open [fish_game.lsproj](LensStudio/fish_game.lsproj) in Lens Studio
+3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). The game is optimized for iPhone X, therefore, choose iPhone X for [Device Simulation](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). You should see the screen on the left.
+4. Choose your dominant hand. It will be the hand you use for the camera gesture. For the scissors gesture, you can either use the same hand and switch between the gestures. However, user testing has shown that switching between these two gestures can be difficult. Therefore, it is recommended to use the other hand for the scissors gesture. After choosing the dominant hand, you should see the screen on the right.
 
 <div align="center">
   <img src="graphics/hand_choice_menu.jpeg" align=center width=200/>
@@ -67,7 +70,7 @@ In this mode, you can train performing the gestures to open and close the mouth,
 > For the best tracking experience, perform the gestures parallel to the screen/camera.
 
 ##### Tutorial
-In the tutorial, you can learn how to play the game. Either study Section [Gameplay](#gameplay) or read the [tutorial](graphics/Ocean_Clean-Up_Tutorial.pdf) while playing along. 
+In the tutorial, you can learn how to play the game. Since the tutorial was designed for a user study where the interviewer explained the game, it does not contain any explanations. To follow along the tutorial, either study Section [Hand Gestures & Gameplay](#hand-gestures--gameplay) or read the [tutorial](graphics/Ocean_Clean-Up_Tutorial.pdf) while playing along. 
 
 The game consists of four randomly generated levels. For all the levels, five trash items are lying on the sea floor. The speed and the number of fish increase gradually for harder levels.
 
@@ -89,9 +92,6 @@ For simplicity, the behavior patterns for playing sounds are not included below.
 
 * [Chain Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/chain-reaction.md): Only after the camera start gesture is performed, then the camera trigger gesture can be recognized. If there are fish visible inside the camera screen when performing the camera trigger gesture, then all those fish stop for 2 seconds, and their true color reveils. It gradually fades during those two seconds to indicate the end of the two seconds interval.
   * _Event_: on camera trigger
-
-* [Timed Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/timed-reaction.md): Two seconds after the fish have been stopped by the camera trigger gesture, they are fully grey again and continue to swim.
-  * _Event_: 2 seconds after on camera trigger
 
 * [Continuous Evaluation](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/continous-evaluation.md): The hands are continuously being tracked and the position of the camera and scissors is updated to overlay the hands while that gesture is perfmormed.
   * _Event_: on hand tracking updated
@@ -151,10 +151,6 @@ __Augmentation Pattern__
   | on:hand tracking updated	| &rarr;	| do:translate | 
   |---|---|---|
   > scissors or camera to updated hand tracking position
-
-  | in:2 (after on: camera trigger) | &rarr;	| do:unhide | 
-  |---|---|---|
-  > normal dragon head
 
 ### Links
 * _Source Code_: [LensStudio/Public/Scripts](LensStudio/Public/Scripts)

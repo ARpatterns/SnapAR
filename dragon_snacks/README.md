@@ -1,11 +1,11 @@
 # Dragon Snacks
-todo: add illustration when illustration assets are ready
-<!-- <div align="center">
+<!-- todo: add illustration when illustration assets are ready
+<div align="center">
   <img src="graphics/segment_overlay.png" width="500"/>
 </div> -->
 
-In this AR scenario, the player's hands become dragons by overlaying dragon images over the hands using the segment overlay pattern. The player uses their hands to directly control these dragons and interact with the game.
-
+In this AR scenario, the player's hands become dragons by overlaying dragon images over the hands, which is an example of the segment overlay pattern. The player uses their hands to directly control these dragons and interact with the game.
+ 
 * _Use Case_: anchored complement
 * _Technology Platform_: [SnapAR](../README.md)
 * _Device Type_: handheld with front camera or computer with webcam
@@ -34,7 +34,7 @@ The food falls down in formations. Instead of eating every food item individuall
 #### Play the Game
 1. Download [Lens Studio 4.31](https://ar.snap.com/download/v4-31). The game only works with this version.
 2. Open [dragon_game.lsproj](LensStudio/dragon_game.lsproj) in Lens Studio
-3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). You should see the following screen:
+3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). The game is optimized for iPhone X, therefore, choose iPhone X for [Device Simulation](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). You should see the following screen:
 
 <div align="center">
   <img src="graphics/menu_screen.png" width="200"/>
@@ -46,7 +46,9 @@ In this mode, you can train performing the gestures to open and close the mouth,
 > For the best tracking experience, perform the gestures parallel to the screen/camera.
 
 ##### Tutorial
-In the tutorial, you can learn how to play the game. Either study Section [Gameplay](#gameplay) or read the [tutorial](graphics/Dragon_Snacks_Tutorial.pdf) while playing along. 
+In the tutorial, you can learn how to play the game. Since the tutorial was designed for a user study where the interviewer explained the game, it does not contain any explanations. To follow along the tutorial, either study Section [Gameplay](#gameplay) or read the [tutorial](graphics/Dragon_Snacks_Tutorial.pdf) while playing along. 
+
+The game consists of four manually designed levels with gradually increased difficulty.
 
 
 ### AR Patterns
@@ -58,7 +60,7 @@ For simplicity, the behavior patterns for playing sounds are not included below.
 * [Complementary Reactions](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/complementary-reactions.md): When the mouth open gesture is performed, then the dragon head with the mouth open is displayed, otherwise, when the mouth closed gesture is performed, then the dragon head with the mouth closed is displayed.
   * _Event_: on mouth open/closed
 
-* [Conditional Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/conditional-reaction.md): When the dragon mouth has food in it and the mouth closed gesture is performed, the food is swallowed and the score is updated.
+* [Conditional Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/conditional-reaction.md): When the dragon mouth has food in it and the mouth closed gesture is performed, then the food is swallowed and the score is updated.
   * _Event_: on mouth closed
 
 * [Continuous Evaluation](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/continous-evaluation.md): The hands are continuously being tracked and the position of the dragon heads is updated to overlay the hands.
@@ -70,7 +72,7 @@ For simplicity, the behavior patterns for playing sounds are not included below.
 * [Instant Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/instant-reaction.md): When the hand tracking is resumed because the hand moved into the camera space or tracking issues were resolved, the dragon head is added again.
   * _Event_: on hand tracking resumed
 
-* [Instant Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/instant-reaction.md): When the dragon head touches a bomb, the dragon gets stunned, therefore, the stunned head is shown instead of the normal dragon head and the stunned UI graphic is shown on the top corner. This graphic helps to see if the dragon is stunned even if the hand/dragon is not visible in the screen.
+* [Instant Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/instant-reaction.md): When the dragon head touches a bomb, the dragon gets stunned. Therefore, the stunned head is shown instead of the normal dragon head and the stunned UI graphic is shown on the top corner. This graphic helps to see if the dragon is stunned even if the hand/dragon is not visible in the screen.
   * _Event_: on bomb touched
 
 * [Timed Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/timed-reaction.md): Ten seconds after the dragon head has touched a bomb, the stunning is revoked, resulting in removing the stunned UI graphic on the top corner and replacing the stunned dragon head with the normal dragon head.

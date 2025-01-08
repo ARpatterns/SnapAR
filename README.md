@@ -25,9 +25,9 @@ AR patterns and scenarios created with Lens Studio.
     <img src="ocean_clean-up/graphics/scissors_gesture_gameplay.gif" width="144"/>
 </div>
 
-The dragon head and the scissors is overlaid over the hand. The mouth and the scissors can be opened and closed when performing the respective gestures.
+The dragon head and the scissors are overlaid over the hand. The mouth and the scissors can be opened and closed when performing the respective gestures.
 
-* _Behavioral Patterns_: Complementary Reactions, Continuous Evaluation, Instant Reaction
+* _Behavioral Patterns_: Complementary Reactions, Continuous Evaluation, Instant Reaction, Chain Reaction
 * _Augmentation Patterns_: Segment Overlay
 * _Project Link_: [Dragon Snacks](dragon_snacks) & [Ocean Clean-Up](ocean_clean-up) (These projects contain the whole scenario, not just the AR pattern.)
 
@@ -83,9 +83,9 @@ In this hand gesture game, the hands represent the pose of the puppet. The contr
     <img src="ocean_clean-up/graphics/gameplay.gif" width="150"/>
 </div>
 
-In this hand gesture game, the hands are used to control the scissors and camera gestures. They are needed to save the fish from being picked up by the hook, and instead pick up the trash from the sea floor to clean it up.
+In this hand gesture game, the hands are used to control the scissors and camera. They are needed to save the fish from being picked up by the hook, and instead trick the hook into picking up the trash from the sea floor.
 
-* _Behavioral Patterns_: Complementary Reactions, Chain Reaction, Timed Reaction, Continuous Evaluation
+* _Behavioral Patterns_: Complementary Reactions, Chain Reaction, Continuous Evaluation
 * _Augmentation Patterns_: Segment Overlay, Anchored Supplement
 * _Project Link_: [Ocean Clean-Up](ocean_clean-up)
 

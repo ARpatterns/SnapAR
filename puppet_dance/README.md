@@ -1,6 +1,6 @@
 # Puppet Dance
-todo: add illustration when illustration assets are ready
-<!-- <div align="center">
+<!-- todo: add illustration when illustration assets are ready
+<div align="center">
   <img src="graphics/segment_overlay.png" width="500"/>
 </div> -->
 
@@ -24,7 +24,7 @@ The pose of the puppet is indirectly represented by gestures. The thumbs up gest
 
 In this game, there are poses falling from the top of the screen. The player needs to bring the puppet into the same pose as the current falling pose. When the falling pose reaches the stage, then the evaluation is triggered. If the pose of the controlled puppet is correct, a green light flashes up. Otherwise, a red light flashes up to indicate that the pose was wrong. After the evaluation, a new pose is spawned and falls from the top of the screen. As a visual helper, the tracked hand skeleton is colored in the same color as the body part of the puppet it controls. 
 
-The game consists of two choreographies to different music pieces. The difficulty of the choreographies is gradually increased by adding more changes between subsequent poses. The goal is to perform as many correct poses as possible. When the choreography is over, the number of correct poses is shown on the screen and an applause sound is played.
+The game consists of two choreographies. The difficulty of the choreographies is gradually increased by adding more changes between subsequent poses. The goal is to perform as many correct poses as possible. When the choreography is over, the number of correct poses is shown on the screen and an applause sound is played.
 
 <div align="center">
   <img src="graphics/gameplay.gif" width="300"/>
@@ -32,7 +32,7 @@ The game consists of two choreographies to different music pieces. The difficult
 
 #### Play the Game
 1. Download [Lens Studio 4.31](https://ar.snap.com/download/v4-31). The game only works with this version.
-2. Open [dragon_game.lsproj](LensStudio/dragon_game.lsproj) in Lens Studio
+2. Open [dance_game.lsproj](LensStudio/dance_game.lsproj) in Lens Studio
 3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). The game is optimized for iPhone X, therefore, choose iPhone X for [Device Simulation](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). You should see the following screen:
 
 <div align="center">
@@ -94,11 +94,11 @@ __Augmentation Pattern__
 
   | on:stage reached	| if:`pose(falling puppet) == pose(controlled puppet)` | do:show | 
   |---|---|---|
-  > green spot light
+  > green light
 
   | on:stage reached	| if:`pose(falling puppet) != pose(controlled puppet)` | do:show | 
   |---|---|---|
-  > red spot light
+  > red light
 
   | on:hand tracking updated	| &rarr;	| do:update | 
   |---|---|---|
@@ -120,7 +120,7 @@ All the games were created as part of Martina Kessler's Master's thesis at [GTC]
 - Dr. Fabio Zünd: supervision
 
 ### Music
-- Disco Medusae Kevin MacLeod (incompetech.com)\
+- Disco Medusae Kevin MacLeod ([incompetech.com](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500041&Search=Search))\
 Licensed under Creative Commons: By Attribution 3.0 License\
 http://creativecommons.org/licenses/by/3.0/
 
