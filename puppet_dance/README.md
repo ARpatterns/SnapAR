@@ -33,7 +33,7 @@ The game consists of two choreographies. The difficulty of the choreographies is
 #### Play the Game
 1. Download [Lens Studio 4.31](https://ar.snap.com/download/v4-31). The game only works with this version.
 2. Open [dance_game.lsproj](LensStudio/dance_game.lsproj) in Lens Studio
-3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). The game is optimized for iPhone X, therefore, choose iPhone X for [Device Simulation](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). You should see the following screen:
+3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). The game is optimized for iPhone X, therefore, choose *iPhone X* for [Device Simulation](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens) and press the button *Simulate device's FOV*. You should see the following screen:
 
 <div align="center">
   <img src="graphics/menu_screen.png" width="200"/>

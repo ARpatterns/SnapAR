@@ -56,7 +56,7 @@ The game is over when all the trash is picked up from the sea floor. It is a sco
 #### Play the Game
 1. Download [Lens Studio 4.31](https://ar.snap.com/download/v4-31). The game only works with this version.
 2. Open [fish_game.lsproj](LensStudio/fish_game.lsproj) in Lens Studio
-3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). The game is optimized for iPhone X, therefore, choose iPhone X for [Device Simulation](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). You should see the screen on the left.
+3. Play the game inside Lens Studio using [Webcam Mode](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens). The game is optimized for iPhone X, therefore, choose *iPhone X* for [Device Simulation](https://developers.snap.com/lens-studio/lens-studio-workflow/previewing-your-lens) and press the button *Simulate device's FOV*. You should see the screen on the left.
 4. Choose your dominant hand. It will be the hand you use for the camera gesture. For the scissors gesture, you can either use the same hand and switch between the gestures. However, user testing has shown that switching between these two gestures can be difficult. Therefore, it is recommended to use the other hand for the scissors gesture. After choosing the dominant hand, you should see the screen on the right.
 
 <div align="center">
