@@ -1,8 +1,4 @@
 # Dragon Snacks
-<!-- todo: add illustration when illustration assets are ready
-<div align="center">
-  <img src="graphics/segment_overlay.png" width="500"/>
-</div> -->
 
 In this AR scenario, the player's hands become dragons by overlaying dragon images over the hands, which is an example of the segment overlay pattern. The player uses their hands to directly control these dragons and interact with the game.
  
@@ -53,7 +49,14 @@ The game consists of four manually designed levels with gradually increased diff
 
 ### AR Patterns
 
-__Behavior Patterns__
+#### Illustrations
+The left illustration shows the hand gesture game using abstract primitives, while the right illustration uses game-specific graphics. The detected hands are shown in green, with an orange marker attached to each hand. A blue element is attached to each marker on the hand. All blue content represents virtual objects. In addition to the elements attached to the hands, there are also virtual objects that are not attached to any real-world object.
+<div align="center">
+  <img src="graphics/abstract_illustration.jpg" width="300"/>
+  <img src="graphics/illustration.jpg" width="300"/>
+</div>
+
+#### Behavior Patterns
 
 For simplicity, the behavior patterns for playing sounds are not included below.
 
@@ -78,7 +81,7 @@ For simplicity, the behavior patterns for playing sounds are not included below.
 * [Timed Reaction](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/timed-reaction.md): Ten seconds after the dragon head has touched a bomb, the stunning is revoked, resulting in removing the stunned UI graphic on the top corner and replacing the stunned dragon head with the normal dragon head.
   * _Event_: 10 seconds after on bomb touched
 
-__Augmentation Pattern__
+#### Augmentation Pattern
 * [Segment Overlay](https://github.com/ARpatterns/catalog/blob/main/augmentation-patterns/segment-overlay.md): The dragon heads are placed as overlays over the hands, which gives the illusion that the hands are the dragons.
   * _Placed_: on the screen at the location of the hand
   * _Aligned_: flat on top of the hand as an overlay

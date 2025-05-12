@@ -50,7 +50,7 @@ In the tutorial, you can practice how to control the puppet. It contains easy da
 
 ### AR Patterns
 
-__Behavior Patterns__
+#### Behavior Patterns
 
 For simplicity, the behavior patterns for playing sounds are not included below.
 
@@ -66,7 +66,14 @@ For simplicity, the behavior patterns for playing sounds are not included below.
 * [Continuous Evaluation](https://github.com/ARpatterns/catalog/blob/main/behavioral-patterns/continous-evaluation.md): The hands are continuously being tracked and the skeleton is overlaid onto the hands.
   * _Event_: on hand tracking updated
 
-__Augmentation Pattern__
+#### Augmentation Pattern
+
+#### Illustrations
+The left illustration shows the hand gesture game using abstract primitives, while the right illustration uses game-specific graphics. The detected hands are shown in green, with an orange marker attached to each hand. A blue element is attached to each marker on the hand. All blue content represents virtual objects. In addition to the elements attached to the hands, there are also virtual objects that are not attached to any real-world object.
+<div align="center">
+  <img src="graphics/abstract_illustration.jpg" width="300"/>
+  <img src="graphics/illustration.jpg" width="300"/>
+</div>
 
 * [Superimposition](https://github.com/ARpatterns/catalog/blob/main/augmentation-patterns/superimposition.md): The tracked skeleton is displayed on top of the hand. The visualization matches the position and orientation of the real hand.
   * _Anchored_: to the hand

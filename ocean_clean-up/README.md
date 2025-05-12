@@ -77,7 +77,14 @@ The game consists of four randomly generated levels. For all the levels, five tr
 
 ### AR Patterns
 
-__Behavior Patterns__
+#### Illustrations
+The left illustration shows the hand gesture game using abstract primitives, while the right illustration uses game-specific graphics. The detected hands are shown in green, with an orange marker attached to each hand. A blue element is attached to each marker on the hand. All blue content represents virtual objects. In addition to the elements attached to the hands, there are also virtual objects that are not attached to any real-world object.
+<div align="center">
+  <img src="graphics/abstract_illustration.jpg" width="300"/>
+  <img src="graphics/illustration.jpg" width="300"/>
+</div>
+
+#### Behavior Patterns
 
 For simplicity, the behavior patterns for playing sounds are not included below.
 
@@ -97,7 +104,7 @@ For simplicity, the behavior patterns for playing sounds are not included below.
   * _Event_: on hand tracking updated
 
 
-__Augmentation Pattern__
+#### Augmentation Pattern
 * [Segment Overlay](https://github.com/ARpatterns/catalog/blob/main/augmentation-patterns/segment-overlay.md): The scissors are placed as overlays over the hand, which gives the illusion that the hand is the scissors.
   * _Placed_: on the screen at the location of the hand
   * _Aligned_: flat on top of the hand as an overlay
